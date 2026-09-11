@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "Campo · Visitas técnicas",
+    "slug": "campo-registro",
+    "version": "1.0.0",
+    "orientation": "default",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.atvpam.campo"
+    },
+    "android": {
+      "package": "com.atvpam.campo"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "Permita o acesso à câmera para registrar evidências da visita agrícola.",
+          "photosPermission": false,
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Permita a localização para registrar o ponto e a precisão da visita agrícola."
+        }
+      ],
+      [
+        "expo-sensors",
+        {
+          "motionPermission": "Permita o sensor de movimento para verificar a estabilidade ao concluir uma visita."
+        }
+      ],
+      "expo-font"
+    ]
+  }
+}

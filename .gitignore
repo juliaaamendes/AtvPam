@@ -1,0 +1,12 @@
+node_modules/
+.expo/
+.npm-cache/
+test-results/
+playwright-report/
+dist/
+web-build/
+android/
+ios/
+*.tsbuildinfo
+.env*
+!.env.example
