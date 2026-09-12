@@ -411,11 +411,11 @@ function CampoApp() {
                       </Text>
                     </View>
                     <Text style={s.heroTitle}>
-                      Cada visita,\num campo melhor.
+                      Cada visita,{"\n"}um campo melhor.
                     </Text>
                     <Text style={s.heroBody}>
-                      Da primeira foto à última observação.\nTudo o que importa,
-                      em um só lugar.
+                      Da primeira foto à última observação.{"\n"}Tudo o que
+                      importa, em um só lugar.
                     </Text>
                     <View style={{ alignSelf: "flex-start" }}>
                       <Button

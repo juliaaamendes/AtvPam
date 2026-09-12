@@ -2,6 +2,26 @@
 
 Aplicativo mobile para registrar visitas agrícolas com foto, GPS e validação de estabilidade. Trabalho **The Code Challenge — Hardware & Recursos Nativos**, níveis **Pleno + Júnior**.
 
+## Vídeo de demonstração
+
+[![Campo em ação: prévia da demonstração legendada](docs/video/campo-demo-preview.gif)](docs/video/campo-demo.mp4)
+
+**[▶ Assistir / baixar o vídeo completo](docs/video/campo-demo.mp4)** · **2min55s** · **Full HD** · **Legendas em português**
+
+Gravado no **POCO Pad M1 com Android e Expo Go**. Clique na prévia para abrir o MP4. As explicações estão incorporadas ao vídeo como legendas, sem narração; o [arquivo SRT](docs/video/campo-demo.pt-BR.srt) também está disponível.
+
+| Tempo | Demonstração                                                       |
+| ----- | ------------------------------------------------------------------ |
+| 0:00  | Apresentação do Campo e nova visita                                |
+| 0:15  | Preenchimento, foto e precisão do GPS                              |
+| 0:45  | Câmera bloqueada, configurações e recuperação da permissão         |
+| 1:10  | Teste automatizado do pico acima de 2g e conclusão com sensor real |
+| 1:45  | Histórico, foto e consulta offline                                 |
+| 2:10  | GPS desligado e mudança de orientação                              |
+| 2:35  | Código, limpeza de recursos e 19 testes aprovados                  |
+
+O trecho de instabilidade é um **teste automatizado**, identificado na tela. A conclusão estável foi gravada com o acelerômetro real, com pico de **1,03g**. A consulta offline usa o app já carregado; as coordenadas exatas foram ocultadas na edição. Veja as [notas da gravação](docs/video/README.md), o [roteiro](docs/ROTEIRO_VIDEO.md) e os [resultados da validação](docs/VALIDACAO.md).
+
 ## Executar
 
 Requisitos: Node.js **22.13 ou superior** e npm. Projeto em Expo SDK 57, React Native e TypeScript. Instale no aparelho uma versão do Expo Go compatível com o SDK 57, consultando [Expo Go](https://expo.dev/go). Android ou iPhone físico é recomendado para validar os sensores.
@@ -74,14 +94,3 @@ A [resposta de permissão do ImagePicker](https://docs.expo.dev/versions/latest/
 O [serviço de localização](https://docs.expo.dev/versions/latest/sdk/location/) é verificado antes da captura, com limite de espera de 15 segundos. O timeout descarta a resposta tardia na interface; a API de captura única não oferece cancelamento da solicitação nativa. A posição não é acompanhada em segundo plano.
 
 Desinstalar o aplicativo ou limpar seus dados remove o histórico. Não há sincronização, exportação ou criptografia adicional. O AsyncStorage carrega o histórico completo em memória e atende ao escopo da atividade; volumes grandes de auditorias exigiriam SQLite com consultas paginadas.
-
-## Validação e entrega
-
-Os testes automatizados cobrem limites do GPS, cálculo vetorial, pico transitório, limite exato de 2,0g, falta de leituras, lacunas, dados inválidos e serialização do histórico. Eles não substituem testes de permissões, câmera e sensores reais. Veja o [checklist manual](docs/VALIDACAO.md) e o [roteiro de vídeo de até 3 minutos](docs/ROTEIRO_VIDEO.md).
-
-Antes da entrega, execute o checklist em um dispositivo, grave o vídeo e publique os arquivos no repositório. A pasta `.npm-cache`, `node_modules` e exportações não devem ser versionadas.
-
-- Repositório configurado: https://github.com/juliaaamendes/AtvPam
-- Vídeo: **adicionar o link após gravar e publicar**.
-
-O código deve ser estudado e explicado por quem apresenta. A implementação foi preparada com apoio de IA; confirme pessoalmente os resultados no aparelho e explique as decisões, especialmente a fórmula, o limite e o fluxo de permissão.

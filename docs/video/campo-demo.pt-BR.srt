@@ -1,0 +1,107 @@
+1
+00:00:00,000 --> 00:00:07,000
+Este é o Campo: registro de visitas agrícolas com foto, localização e validação de estabilidade.
+
+2
+00:00:07,000 --> 00:00:15,000
+Vamos testar o app no tablet Android, seguindo os desafios Pleno e Júnior.
+
+3
+00:00:15,000 --> 00:00:20,000
+Preenchemos a propriedade, o responsável técnico e a cultura com dados de demonstração.
+
+4
+00:00:20,000 --> 00:00:25,000
+O formulário também registra a condição observada e as orientações da visita.
+
+5
+00:00:25,000 --> 00:00:31,000
+A foto real do ambiente de teste foi capturada pela câmera nativa e anexada à visita.
+
+6
+00:00:31,000 --> 00:00:37,000
+Ao capturar o GPS, o app mostra a precisão da leitura. Aqui, aproximadamente 21 metros.
+
+7
+00:00:37,000 --> 00:00:45,000
+Verde: menos de 10 m. Amarelo: de 10 a 30 m. Vermelho: mais de 30 m.
+
+8
+00:00:45,000 --> 00:00:51,000
+Com a câmera bloqueada no Android, o app orienta a recuperação da permissão.
+
+9
+00:00:51,000 --> 00:00:56,000
+O botão abre as configurações do Expo Go, onde a permissão da câmera é gerenciada.
+
+10
+00:00:56,000 --> 00:01:02,000
+Restauramos a permissão durante o uso. A abertura da câmera foi conferida novamente.
+
+11
+00:01:02,000 --> 00:01:10,000
+O código consulta granted e canAskAgain antes e depois de solicitar o acesso à câmera.
+
+12
+00:01:10,000 --> 00:01:16,000
+Neste teste automatizado, uma amostra de 2,01g deve bloquear a tentativa.
+
+13
+00:01:16,000 --> 00:01:22,000
+As leituras seguintes de 1g não apagam o pico. Este trecho não é um teste de movimento físico.
+
+14
+00:01:22,000 --> 00:01:28,000
+No tablet real, a conclusão verifica o acelerômetro durante uma janela de 3 segundos.
+
+15
+00:01:28,000 --> 00:01:34,000
+A visita foi salva com o aparelho estável. O pico registrado foi de 1,03g.
+
+16
+00:01:34,000 --> 00:01:40,000
+Math.hypot calcula a magnitude dos três eixos, em g. O limite é estritamente maior que 2,0g.
+
+17
+00:01:40,000 --> 00:01:45,000
+O pico é guardado fora do estado visual: uma leitura estável posterior não libera a tentativa.
+
+18
+00:01:45,000 --> 00:01:51,000
+Desligamos o Wi-Fi e a conexão com o servidor pelo USB. O app já estava carregado.
+
+19
+00:01:51,000 --> 00:01:56,000
+O histórico, a foto e o pico de estabilidade continuam acessíveis sem essa conexão.
+
+20
+00:01:56,000 --> 00:02:02,000
+Os detalhes preservam os dados preenchidos. O registro também foi conferido após reabrir o app.
+
+21
+00:02:02,000 --> 00:02:10,000
+O AsyncStorage guarda os dados. A imagem é copiada para a pasta de documentos antes de salvar.
+
+22
+00:02:10,000 --> 00:02:18,000
+Com a localização desligada, o app explica como ativá-la e mantém o formulário disponível.
+
+23
+00:02:18,000 --> 00:02:26,000
+Ao mudar a orientação, o formulário se reorganiza na largura disponível do tablet.
+
+24
+00:02:26,000 --> 00:02:35,000
+Os campos permanecem preenchidos. A interface mantém rolagem e áreas seguras do sistema.
+
+25
+00:02:35,000 --> 00:02:43,000
+Ao terminar, os listeners e timers são removidos. Leituras insuficientes impedem a conclusão.
+
+26
+00:02:43,000 --> 00:02:49,000
+Os 19 testes de domínio passaram, incluindo limites do GPS, pico transitório e integridade do histórico.
+
+27
+00:02:49,000 --> 00:02:55,000
+TypeScript sem erros. A gravação combina testes reais no Android e verificações automatizadas identificadas.
